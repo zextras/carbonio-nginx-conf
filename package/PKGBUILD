@@ -20,7 +20,8 @@ depends:apt=(
   "carbonio-memcached"
   "carbonio-nginx"
   "carbonio-prometheus-nginx-exporter"
-  "sqlite3"
+  "sqlite3",
+  "carbonio-proxy-conf-gen"
 )
 depends:yum=(
   "carbonio-certbot"

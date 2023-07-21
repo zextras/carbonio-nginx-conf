@@ -1,0 +1,11 @@
+!{explode domain(vhn)}
+# HTTP Proxy Configuration
+#
+server
+{
+    server_name         ${vhn};
+    ${core.ipboth.enabled}listen            ${vip}${web.http.port};
+    ${core.ipv4only.enabled}listen            ${vip}${web.http.port};
+    ${core.ipv6only.enabled}listen            ${vip}${web.http.port};
+    include                 ${core.includes}/${core.cprefix}.web.http.mode-${web.mailmode};
+}

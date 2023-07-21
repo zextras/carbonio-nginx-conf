@@ -49,7 +49,7 @@ class MemcacheServersVar extends com.zextras.proxyconfgen.ProxyConfVar {
     }
     if (servers.isEmpty()) {
       // ERROR not exception
-      mLog.error("No available memcached servers could be contacted");
+      mLog.info("No available memcached servers could be contacted");
     }
     mValue = servers;
   }

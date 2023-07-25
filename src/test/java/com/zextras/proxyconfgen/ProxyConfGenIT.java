@@ -6,7 +6,7 @@ package com.zextras.proxyconfgen;
 
 
 
-import com.zimbra.cs.mailbox.MailboxTestUtil;
+import com.zimbra.cs.mailbox.test.MailboxTestUtil;
 import java.io.File;
 import java.nio.file.Path;
 import org.junit.jupiter.api.Assertions;
@@ -22,7 +22,7 @@ class ProxyConfGenIT {
 
   @Test
   void shouldDeleteCertbotCertificatesWhenDomainNotExisting() throws Exception{
-    final String path = ProxyConfGen.class.getClassLoader().getResource("opt/zextras").getPath();
+    final String path = ProxyConfGen.class.getClassLoader().getResource("").getPath();
     final String domainName = "test.com";
 
     final File leDir = new File(Path.of(path + File.separator

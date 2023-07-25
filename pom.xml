@@ -6,7 +6,7 @@
   <parent>
     <artifactId>zm-mailbox</artifactId>
     <groupId>zextras</groupId>
-    <version>23.8.0-SNAPSHOT</version>
+    <version>23.9.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>proxyconfgen</artifactId>
@@ -25,7 +25,7 @@
       <artifactId>zm-store</artifactId>
       <classifier>tests</classifier>
       <type>test-jar</type>
-      <version>23.8.0-SNAPSHOT</version>
+      <version>23.9.0-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
 
@@ -53,6 +53,11 @@
   </dependencies>
 
   <build>
+    <testResources>
+      <testResource>
+        <directory>${project.basedir}/conf</directory>
+      </testResource>
+    </testResources>
     <plugins>
       <!-- MANIFEST properties for Extension  class-->
       <plugin>
